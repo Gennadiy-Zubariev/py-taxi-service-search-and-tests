@@ -10,7 +10,7 @@ class ModelTests(TestCase):
         car = Car.objects.create(model="test", manufacturer=manufacturer)
         self.assertEqual(str(car), car.model)
 
-    def driver_str(self):
+    def test_driver_str(self):
         driver = get_user_model().objects.create(
             username="test",
             password="1234",
